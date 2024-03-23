@@ -98,11 +98,11 @@ use crate::Buf;
 /// └─────┴─────┴───────────┴───────────────┴─────┘
 /// ```
 pub struct Bytes {
-    ptr: *const u8,
-    len: usize,
+    pub ptr: *const u8,
+    pub len: usize,
     // inlined "trait object"
-    data: AtomicPtr<()>,
-    vtable: &'static Vtable,
+    pub data: AtomicPtr<()>,
+    pub vtable: &'static Vtable,
 }
 
 pub(crate) struct Vtable {
